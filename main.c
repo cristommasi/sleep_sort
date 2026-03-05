@@ -14,7 +14,6 @@ int main(int argc, char **argv)
 		lnkdlstadd_back(list, new_node);
 	}
     lnkdlst_index(list);
-    lnkdlst_print(list);
     sorted_list = sleep_sort(list, lnkdlst_len(list));
     if (!sorted_list)
         return (lnkdlst_free(list), 1);
