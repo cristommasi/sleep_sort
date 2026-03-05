@@ -11,7 +11,7 @@ void    *sleep_sort_routine(void *param)
 
     node = (t_list *)param;
     pthread_barrier_wait(&barrier);
-	usleep(node->index * 10000);
+	usleep(node->index * 1001);
     pthread_mutex_lock(&append_lock);
     if (!sorted_list)
     {
