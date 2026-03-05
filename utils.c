@@ -83,13 +83,22 @@ size_t	lnkdlst_len(t_list **list)
 
 void	lnkdlst_print(t_list **list)
 {
-	t_list	*temp;
+	t_list	*temp = *list;
+	int	     temp_num = temp->value;
 
-	temp = *list;
+
+	printf("\n\n");
 	while (temp)
 	{
-		printf("%d -> ", temp->value);
+
+		if (temp->value < temp_num)
+			printf(COLOR_RED "%d" COLOR_RESET, temp->value);
+		else 
+			printf(COLOR_GREEN "%d" COLOR_RESET, temp->value);
+		if (temp->next != NULL)
+			printf(", ");
+		temp_num = temp->value;
 		temp = temp->next;
 	}
-	printf("NULL\n");
+	printf(", " COLOR_PURPLE "NULL\n" COLOR_RESET);
 }
