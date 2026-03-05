@@ -11,6 +11,10 @@
 # define ERR_ARGS "Usage: ./sleep_sort 9 5 4 1 8 5 3...\n"
 # define ERR_THREAD_CREATE "Error creating threads.\n"
 # define ERR_THREAD_JOIN "Error joining threads.\n"
+# define COLOR_RED     "\033[31m"
+# define COLOR_GREEN   "\033[32m"
+# define COLOR_PURPLE  "\033[35m"
+# define COLOR_RESET   "\033[0m"
 
 typedef struct s_list
 {
